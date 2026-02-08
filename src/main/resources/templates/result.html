@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Decision Result</title>
+</head>
+<body>
+
+<h2>Agent Decision</h2>
+
+<p><b>Ticket ID:</b> <span th:text="${result.ticketId}"></span></p>
+<p><b>Intent:</b> <span th:text="${result.intent}"></span></p>
+
+<p><b>Planner Steps:</b></p>
+<ul>
+    <li th:each="step : ${result.plannerSteps}"
+        th:text="${step}">
+    </li>
+</ul>
+
+<p><b>Final Decision:</b>
+    <span th:text="${result.finalDecision}"></span>
+</p>
+
+<p><b>Escalated:</b>
+    <span th:text="${result.escalated}"></span>
+</p>
+
+<br/>
+<a href="/">Process Another Ticket</a>
+
+</body>
+</html>
