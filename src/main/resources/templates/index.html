@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AI Support Agent Dashboard</title>
+</head>
+<body>
+
+<h2>Customer Support Agent</h2>
+
+<form action="/process" method="post">
+    <label>Ticket ID:</label><br/>
+    <input type="number" name="ticketId" required/><br/><br/>
+
+    <label>Customer ID:</label><br/>
+    <input type="text" name="customerId" required/><br/><br/>
+
+    <label>Message:</label><br/>
+    <textarea name="message" rows="4" cols="50" required></textarea><br/><br/>
+
+    <button type="submit">Process Ticket</button>
+</form>
+
+</body>
+</html>
